@@ -1,10 +1,12 @@
+@use 'hero';
+
 * {
-    margin: 0  ;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-$cordDeFundo: #040714;
+$corDeFundo: #040714;
 $corTextoPincipal: silver;
 $corTextoSecundario: #f9f9f9;
 
@@ -14,7 +16,7 @@ body {
 
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
-    line-height: $fontSize + 10px;
+    line-height: #{$fontSize + 10px}; // Corrigido
     color: $corTextoPincipal;
 }
 
@@ -27,8 +29,8 @@ body {
     @include text(18px);
 }
 
-.text{
-    @include text;
+.text {
+    @include text(); // Corrigido para usar o valor padrão
 }
 
 .text--small {
@@ -46,7 +48,7 @@ body {
 }
 
 .title {
-    @include title;
+    @include title(); // Corrigido para usar o valor padrão
 }
 
 .tile--small {
