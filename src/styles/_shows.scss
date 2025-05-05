@@ -5,9 +5,13 @@
 
     &__list {
         margin-top: 44px;
-        display: grid;
+        display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+
+        &--is-active { // Adiciona a classe is-active para o botão ativo
+            display: grid;
+        }
 
         &__item {
             img{
@@ -20,18 +24,18 @@
     &__tabs {
         display: flex;
         justify-content: center;
+
         &__button {
             color: variaveis.$corTextoSecundario;
             font-size: 20px;
             border: none;
-            border-bottom: 5px solid variaveis.$corTextoSecundario;
+
             padding-bottom: 5px;
             background: none;
             text-transform: uppercase;
             margin: 0 1vw;
 
-            &--is-active { // Adiciona a classe is-active para o botão ativo
-                display: grid;
+            &--is-active {
                 border-bottom: 5px solid variaveis.$corTextoSecundario;
             }
         }

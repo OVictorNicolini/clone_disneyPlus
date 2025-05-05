@@ -48,9 +48,12 @@
 }
 .shows__list {
   margin-top: 44px;
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
+}
+.shows__list--is-active {
+  display: grid;
 }
 .shows__list__item img {
   max-width: 100%;
@@ -64,7 +67,6 @@
   color: #f9f9f9;
   font-size: 20px;
   border: none;
-  border-bottom: 5px solid #f9f9f9;
   padding-bottom: 5px;
   background: none;
   text-transform: uppercase;
