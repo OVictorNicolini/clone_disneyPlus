@@ -6,7 +6,7 @@
   background-size: cover;
 }
 .hero__content {
-  max-width: 640px;
+  max-width: 520px;
 }
 .hero__content__branding {
   max-width: 320px;
@@ -31,20 +31,10 @@
 .hero__content__combos__combo img {
   max-height: 60px;
 }
-.hero__content__combos__combo button {
-  display: block;
-  width: 100%;
-  height: 60px;
-  color: #f9f9f9;
-  background-color: #6421ff;
-  text-transform: uppercase;
-  border-radius: 4px;
-  margin-top: 2vw;
-  margin-bottom: 8px;
-}
 
 .shows {
   padding: 2vw 5.6vw;
+  min-height: 60vw;
 }
 .shows__list {
   margin-top: 44px;
@@ -71,9 +61,45 @@
   background: none;
   text-transform: uppercase;
   margin: 0 1vw;
+  cursor: pointer;
+  border-bottom: 5px solid transparent;
 }
 .shows__tabs__button--is-active {
-  border-bottom: 5px solid #f9f9f9;
+  border-color: #f9f9f9;
+}
+
+.plans {
+  padding: 5.6vw;
+}
+.plans h2 {
+  text-align: center;
+}
+.plans__list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.plans__list__item {
+  text-align: center;
+  padding: 60px 44px 44px;
+  max-width: 380px;
+  width: 100%;
+}
+.plans__list__item:nth-child(2) {
+  background-image: url(../images/fundo_combo_plus.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.plans__list__item strong {
+  display: block;
+  margin-top: 20px;
+}
+.plans__list img {
+  height: 70px;
+  margin-bottom: 20px;
+}
+.plans p {
+  text-align: center;
 }
 
 @font-face {
@@ -142,4 +168,20 @@ body {
   line-height: 38px;
   color: silver;
   color: #f9f9f9;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  height: 60px;
+  color: #f9f9f9;
+  background-color: #6421ff;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 2vw;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #7a2eff;
 }
