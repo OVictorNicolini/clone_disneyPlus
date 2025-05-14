@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
+    const questions = document.querySelectorAll('[data-faq-question]'); // Seleciona todas as abas
 
     for (let i = 0; i < buttons.length; i++) { // i é o índice do botão e length é o número de botões
         buttons[i].addEventListener('click', function(botao) {
@@ -13,7 +14,18 @@ document.addEventListener('DOMContentLoaded', function() {
             botao.target.classList.add('shows__tabs__button--is-active'); // adiciona a classe que mostra o botão ativo
         });
     }
+
+    for (let i = 0; i < questions.length; i++) { // i é o índice do botão e length é o número de botões
+        questions[i].addEventListener('click', abreOuFechaResposta); // adiciona o evento de clique para abrir ou fechar a resposta{
+    }
 });
+
+function abreOuFechaResposta(elemento) {
+    const classe = 'faq__questions__item--is-open'; // classe que mostra a resposta
+    const elementoPai = elemento.target.parentNode; // seleciona o elemento pai do botão clicado
+
+    elementoPai.classList.toggle(classe); // adiciona ou remove a classe que mostra a resposta
+}
 
 function removeBotaoAtivo() {
     const buttons = document.querySelectorAll('[data-tab-button]'); // seleciona todos os botões com o atributo data-tab-button
