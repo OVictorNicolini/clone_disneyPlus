@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < questions.length; i++) { // i é o índice do botão e length é o número de botões
         questions[i].addEventListener('click', abreOuFechaResposta); // adiciona o evento de clique para abrir ou fechar a resposta{
     }
-});
+})
 
 function abreOuFechaResposta(elemento) {
     const classe = 'faq__questions__item--is-open'; // classe que mostra a resposta

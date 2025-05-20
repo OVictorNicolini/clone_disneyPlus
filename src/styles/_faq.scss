@@ -1,3 +1,5 @@
+@use 'variaveis';
+
 .faq {
     padding: 5.6vw;
 
@@ -34,15 +36,27 @@
             &__answer {
                 height: 0;
                 overflow: hidden;
-            }
+                padding: 0 24px;
+                transition: height, .5s ease;
+            
+                ul {
+                    list-style-type: disc;
+                    padding-left: 1em;
+                }
+
+                li {
+                    color: variaveis.$corTextoPrincipal;
+                }
+}
 
             &--is-open {
-                .faq__questions__item__question::after {
+                .faq__questions__item__question::after { // Troca o + pelo - quando a pergunta está aberta
                     content: '-';
                 }
-                .faq__questions__item__answer {
+                .faq__questions__item__answer {// Troca o height: 0 por height: auto quando a pergunta está aberta
                     height: auto;
-                    padding: 24px;
+                    padding-bottom: 24px;
+                    transition: height, .5s ease;
                 }
             }
         }

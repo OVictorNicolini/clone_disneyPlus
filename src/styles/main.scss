@@ -32,7 +32,7 @@ body {
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
     line-height: #{$fontSize + 10px}; // Corrigido
-    color: variaveis.$corTextoPincipal;
+    color: variaveis.$corTextoPrincipal;
 }
 
 @mixin title($fontSize: 40px) {
