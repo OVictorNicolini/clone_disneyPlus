@@ -2,6 +2,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
     const questions = document.querySelectorAll('[data-faq-question]'); // Seleciona todas as abas
 
+    const heroSection = document.querySelector('.hero'); // Seleciona a seção hero
+    const alturaHero = heroSection.clientHeight; // Obtém a altura da seção hero
+
+    window.addEventListener('scroll', function() {
+        const posicaoAtual = window.scrollY; // Obtém a posição atual do scroll
+
+        if (posicaoAtual < alturaHero) { // Se a posição atual do scroll for maior que a altura da seção hero
+            ocultaElementosDoHeader();
+        } else {
+            exibeElementosDoHeader();
+        } // Exibe os elementos do menu
+        }
+    )
+
+
+    // Seção de atrações, programação das abas
+
     for (let i = 0; i < buttons.length; i++) { // i é o índice do botão e length é o número de botões
         buttons[i].addEventListener('click', function(botao) {
             const abaAlvo = botao.target.dataset.tabButton; // data-tab-button é o atributo do botão que contém o nome da aba
@@ -15,10 +32,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Seção de FAQ, perguntas e respostas
+
     for (let i = 0; i < questions.length; i++) { // i é o índice do botão e length é o número de botões
         questions[i].addEventListener('click', abreOuFechaResposta); // adiciona o evento de clique para abrir ou fechar a resposta{
     }
-})
+});
+
+function ocultaElementosDoHeader() {
+    const header = document.querySelector('header');
+    header.classList.add('header--is-hidden'); // adiciona a classe que oculta o header
+}
+
+function exibeElementosDoHeader() {
+    const header = document.querySelector('header');
+    header.classList.remove('header--is-hidden'); // adiciona a classe que oculta o header
+}
 
 function abreOuFechaResposta(elemento) {
     const classe = 'faq__questions__item--is-open'; // classe que mostra a resposta
