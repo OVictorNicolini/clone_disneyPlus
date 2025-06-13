@@ -44,7 +44,7 @@
                     <span class="text">R$ 45,90/mês*</span>
                 </li>
                 <li class="hero__content__combos__combo">
-                    <img src="./dist/images/logos/disney_star_plus_starzplay.png" alt="Disney+ - Star+ - Combo+">
+                    <img class="tree_plans" src="./dist/images/logos/disney_star_plus_starzplay.png" alt="Disney+ - Star+ - Combo+">
                     <button class="button">Assine Agora</button>
                     <span class="text">R$ 55,90/mês*</span>
                 </li>
@@ -169,7 +169,10 @@
         </div>
     </section>
     <section class="image-text-section image-text-section--image-full-width">
-        <img src="./dist/images/fundo_rei_leao.png" alt="Rei Leão">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png"/>
+            <img src="./dist/images/fundo_rei_leao.png" alt="Rei Leão">
+        </picture>
         <div class="image-text-section__text_container image-text-section--image-full-width__text_container">
             <h2 class="title">Baixe filmes e séries</h2>
                         <p class="text--big">
@@ -248,7 +251,7 @@
             </li>
             <li class="faq__questions__item">
                 <div class="faq__questions__item__question" data-faq-question>
-                    Já tem o DIsney+ ou o Star+ e quer o Combo+?
+                    <p>Já tem o DIsney+ ou o Star+ e quer o Combo+?</p>
                 </div>
                 <div class="faq__questions__item__answer text--big">
                     <p>Ao assinar o Combo+:</p>
